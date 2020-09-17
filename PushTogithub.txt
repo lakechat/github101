@@ -1,0 +1,23 @@
+This file is about how to push existing projects/files to Github
+(https://scotch.io/tutorials/how-to-push-an-existing-project-to-github)
+
+Step 1: Create a Repo
+This involves logging into GitHub and creating the repo. You can choose to either initialize a README or not. 
+It doesn't really matter because we're just going to override everything in this remote repository anyways.
+
+Step 2: Initialize Git in the project folder
+From your terminal and assuming Git is already installed on your computer, run the following commands after navigating to folder you would like to add:
+  1. git init
+  2. git add -a 
+  3. git commit -m 'Added my project'
+  4. git remote add origin git@github.com:scotch-io/my-new-project.git
+  5. git push -u -f origin master
+  
+With this, there are a few things to note. The -f flag stands for force. 
+This will automatically overwrite everything in the remote directory. 
+We're only using it here to overwrite the README that GitHub automatically initialized. 
+If you skipped that, the -f flag isn't really necessary.
+
+The -u flag sets the remote origin as the default. This lets you later easily just do 
+git push and git pull without having to specifying an origin since we always want GitHub in this case.
+  
